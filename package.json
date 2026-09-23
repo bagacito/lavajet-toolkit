@@ -1,6 +1,6 @@
 {
   "name": "@bagacito/lavajet-toolkit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Toolkit for the lavajet project",
   "type": "module",
   "main": "./lib/cjs/index.cjs",
