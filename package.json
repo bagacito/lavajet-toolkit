@@ -22,7 +22,7 @@
   "scripts": {
     "do-install": "NPM_TOKEN=$(cat .npmtoken) npm install",
     "build": "decaf build --dev && sed -i -e '1i#!/usr/bin/env node' lib/cjs/bin/*.cjs 2>/dev/null || true",
-    "release": "npm version patch && npm run build && git push --follow-tags && npm publish --access restricted",
+    "release": "npm version patch && npm run build && git push --follow-tags && NPM_TOKEN=$(cat .npmtoken) npm publish --access restricted",
     "test": "jest --runInBand --detectOpenHandles",
     "test:unit": "jest --testPathPatterns=\"/tests/unit\" --passWithNoTests --detectOpenHandles",
     "test:all": "jest --testPathPatterns=\"/tests\" --passWithNoTests --detectOpenHandles",
