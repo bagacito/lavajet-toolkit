@@ -1,0 +1,68 @@
+{
+  "name": "lavajet-toolkit",
+  "version": "0.1.0",
+  "description": "Toolkit for the lavajet project",
+  "type": "module",
+  "main": "./lib/cjs/index.cjs",
+  "module": "./lib/esm/index.js",
+  "types": "./lib/types/index.d.mts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./lib/types/index.d.mts",
+        "default": "./lib/esm/index.js"
+      },
+      "require": {
+        "types": "./lib/types/index.d.cts",
+        "default": "./lib/cjs/index.cjs"
+      },
+      "default": "./lib/esm/index.js"
+    }
+  },
+  "scripts": {
+    "do-install": "npm install",
+    "build": "decaf build --dev && sed -i -e '1i#!/usr/bin/env node' lib/cjs/bin/*.cjs 2>/dev/null || true",
+    "test": "jest --runInBand --detectOpenHandles",
+    "test:unit": "jest --testPathPatterns=\"/tests/unit\" --passWithNoTests --detectOpenHandles",
+    "test:all": "jest --testPathPatterns=\"/tests\" --passWithNoTests --detectOpenHandles",
+    "lint": "eslint .",
+    "lint-fix": "eslint --fix .",
+    "prepare-pr": "npm run lint-fix && npm run build && npm run test:all"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bagacito/lavajet-toolkit.git"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  },
+  "keywords": [
+    "lavajet",
+    "toolkit",
+    "typescript",
+    "ts"
+  ],
+  "author": "lavajet",
+  "license": "UNLICENSED",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/bagacito/lavajet-toolkit/issues"
+  },
+  "homepage": "https://github.com/bagacito/lavajet-toolkit#readme",
+  "devDependencies": {
+    "@decaf-ts/cli": "^0.13.2",
+    "@decaf-ts/utils": "^1.11.1",
+    "@eslint/js": "^9.39.5",
+    "@types/jest": "^30.0.0",
+    "eslint": "^9.36.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "globals": "^16.5.0",
+    "jest": "^30.2.0",
+    "prettier": "3.6.2",
+    "ts-jest": "^29.4.4",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.70.1"
+  }
+}

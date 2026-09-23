@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+
+# Build output
+lib/
+dist/
+docs/
+
+# Reports
+workdocs/reports/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment / secrets
+.env
+.env.local
+.npmtoken
+.dockertoken
+.confluence-token
+.token
+
+# OS
+.DS_Store
+Thumbs.db
