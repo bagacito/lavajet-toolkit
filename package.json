@@ -1,5 +1,5 @@
 {
-  "name": "lavajet-toolkit",
+  "name": "@bagacito/lavajet-toolkit",
   "version": "0.1.0",
   "description": "Toolkit for the lavajet project",
   "type": "module",
@@ -20,7 +20,7 @@
     }
   },
   "scripts": {
-    "do-install": "npm install",
+    "do-install": "NPM_TOKEN=$(cat .npmtoken) npm install",
     "build": "decaf build --dev && sed -i -e '1i#!/usr/bin/env node' lib/cjs/bin/*.cjs 2>/dev/null || true",
     "test": "jest --runInBand --detectOpenHandles",
     "test:unit": "jest --testPathPatterns=\"/tests/unit\" --passWithNoTests --detectOpenHandles",
@@ -45,7 +45,10 @@
   ],
   "author": "lavajet",
   "license": "UNLICENSED",
-  "private": true,
+  "private": false,
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "bugs": {
     "url": "https://github.com/bagacito/lavajet-toolkit/issues"
   },
