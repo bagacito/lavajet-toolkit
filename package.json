@@ -17,6 +17,17 @@
         "default": "./lib/cjs/index.cjs"
       },
       "default": "./lib/esm/index.js"
+    },
+    "./shared": {
+      "import": {
+        "types": "./lib/types/shared/index.d.mts",
+        "default": "./lib/esm/shared/index.js"
+      },
+      "require": {
+        "types": "./lib/types/shared/index.d.cts",
+        "default": "./lib/cjs/shared/index.cjs"
+      },
+      "default": "./lib/esm/shared/index.js"
     }
   },
   "scripts": {

@@ -1,14 +1,4 @@
 import { LoggingConfig } from "@decaf-ts/logging";
-import { MspDetails } from "@decaf-ts/for-fabric/shared";
-import { TaskEngineAutoShutdownConfig } from "@decaf-ts/core";
-import { InfrastructureConfig } from "../admin/InfrastructureConfig";
-
-export type ResolverOwnerConfig = {
-  protocol: string;
-  host: string;
-  path?: string;
-  headers?: Record<string, string>;
-};
 
 /**
  * @description Application configuration type
@@ -62,9 +52,6 @@ export type LavajetConfig = LoggingConfig & {
     defaultLimit: number;
     publicTtlMs: number;
     publicLimit: number;
-  };
-  validation: {
-    gtin: boolean;
   };
   resolver: {
     cronTime: {
