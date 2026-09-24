@@ -1,7 +1,7 @@
 import { LavajetConfig } from "./types";
 import { SharedEnvironment as SharedEnvironment } from "../shared/environment";
 
-export const DefaultPTPConfig: LavajetConfig = {
+export const DefaultLavajetConfig: LavajetConfig = {
   app: "lavajet",
   env: "development",
   level: "debug",
@@ -57,4 +57,4 @@ export const DefaultPTPConfig: LavajetConfig = {
   },
 } as unknown as LavajetConfig;
 
-export const Environment = SharedEnvironment.accumulate(DefaultPTPConfig);
+export const Environment = SharedEnvironment.accumulate(DefaultLavajetConfig);

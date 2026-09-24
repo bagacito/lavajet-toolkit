@@ -3,7 +3,7 @@ import { DefaultLoggingConfig, LoggedEnvironment, LoggingConfig, LoggingMode, Lo
 import { LavajetConfig } from "../config/types";
 import { FileContentFilter, PasswordFilter } from "./logging/filters";
 
-export const DefaultSharedPTPConfig: Pick<LavajetConfig, "env" | "lavajet"> & {
+export const DefaultSharedLavajetConfig: Pick<LavajetConfig, "env" | "lavajet"> & {
   blobs: { maxSize: number };
 } & LoggingConfig = {
   env: "development",
@@ -28,4 +28,4 @@ export const DefaultSharedPTPConfig: Pick<LavajetConfig, "env" | "lavajet"> & {
   },
 };
 
-export const SharedEnvironment = LoggedEnvironment.accumulate(DefaultSharedPTPConfig);
+export const SharedEnvironment = LoggedEnvironment.accumulate(DefaultSharedLavajetConfig);
