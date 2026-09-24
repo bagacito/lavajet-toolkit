@@ -1,9 +1,5 @@
 {
   "trailingComma": "es5",
-  "max-len": {
-    "tabWidth": 2,
-    "code": 300,
-    "ignoreComments": true,
-    "ignoreTrailingComments": true
-  }
+  "tabWidth": 2,
+  "printWidth": 300
 }
