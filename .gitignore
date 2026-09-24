@@ -8,6 +8,7 @@ docs/
 
 # Reports
 workdocs/reports/
+coverage
 
 # Logs
 *.log

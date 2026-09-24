@@ -2,7 +2,7 @@ import { LavajetConfig } from "./types";
 import { SharedEnvironment as SharedEnvironment } from "../shared/environment";
 
 export const DefaultPTPConfig: LavajetConfig = {
-  app: "lavaket",
+  app: "lavajet",
   env: "development",
   level: "debug",
   projectShort: "LJ",
