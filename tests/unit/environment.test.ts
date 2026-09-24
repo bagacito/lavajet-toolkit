@@ -1,4 +1,4 @@
-import { Environment, SharedEnvironment, DefaultPTPConfig } from "../../src/index";
+import { Environment, SharedEnvironment, DefaultLavajetConfig } from "../../src/index";
 import { PasswordFilter, FileContentFilter } from "../../src/shared/logging/filters";
 
 const ENV_KEYS = [
@@ -44,7 +44,7 @@ describe("environment", () => {
   });
 
   it("exposes the accumulated default configuration", () => {
-    expect(DefaultPTPConfig.app).toBe("lavajet");
+    expect(DefaultLavajetConfig.app).toBe("lavajet");
     expect(SharedEnvironment.app).toBe("lavajet");
     expect(SharedEnvironment.env).toBe("development");
     expect(SharedEnvironment.lavajet.host).toBe("localhost:3000");
